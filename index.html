@@ -25,20 +25,20 @@
             <img class="hero__vector" src="asset/vectores/Decor.svg" alt="" />
           </figure>
           <div class="hero__menu">
-            <a href="#" class="btn btn__close"><i class="bx bx-x"></i></a>
+            <a  class="btn btn__close"><i class="bx bx-x"></i></a>
             <ul class="hero__list">
-              <li class="hero__item"><a href="#home"></a>Inicio</li>
-              <li class="hero__item"><a href="#service"></a>Servicios</li>
-              <li class="hero__item"><a href=""></a>Acerca de mí</li>
-              <li class="hero__item"><a href=""></a>Mis habilidades</li>
-              <li class="hero__item"><a href=""></a>Mi portfolio</li>
-              <li class="hero__item"><a href=""></a>Contacto</li>
+              <li class="hero__item"><a class="nav__cta active" href="#home">Inicio</a></li>
+              <li class="hero__item"><a class="nav__cta" href="#skill">Mis habilidades</a></li>
+              <li class="hero__item"><a class="nav__cta" href="#about">Acerca de mí</a></li>
+              <li class="hero__item"><a class="nav__cta" href="#service">Servicios</a></li>
+              <li class="hero__item"><a class="nav__cta" href="#portafoly">Mi portfolio</a></li>
+              <li class="hero__item"><a class="nav__cta" href="#contact">Contacto</a></li>
             </ul>
           </div>
-          <a href="#" class="btn btn-open"><i class="bx bx-menu"></i></a>
+          <a class="btn btn-open"><i class="bx bx-menu"></i></a>
         </div>
       </nav>
-      <section class="hero__main container">
+      <section id="home" class="hero__main container">
         <div class="hero__main-figure">
           <img
             class="hero__main-img"
@@ -72,7 +72,7 @@
       </section>
     </header>
     <main class="main">
-      <section class="section__skill container">
+      <section id="skill" class="section__skill container">
         <h2 class="subtitle">habilidades</h2>
         <div class="section__rates-container">
           <div class="section__rates">
@@ -97,7 +97,7 @@
           </div>
         </div>
       </section>
-      <section class="section__about container">
+      <section id="about" class="section__about container">
         <h2 class="subtitle">acerca de mí</h2>
         <p class="section__paragraph">
           Desarrolladora Full Stack en formación con conocimientos en HTML,CSS y
@@ -132,8 +132,8 @@
           <img src="asset/vectores/Decor 1.svg" alt="">
         </div>
       </section>
-      <section class="section__skill container">
-        <h2 class="subtitle">mis habilidades</h2>
+      <section id="service" class="section__skill container">
+        <h2 class="subtitle">Servicios</h2>
         <div class="section__items">
           <div class="section__item">
             <figure class="section__skill-figure">
@@ -165,7 +165,7 @@
           </div>
         </div>
       </section>
-      <section class="section__portafolio container">
+      <section id="portafoly" class="section__portafolio container">
         <h2 class="subtitle">mi portafolio</h2>
         <div class="section__portafolio-items">
           <div class="section__portafolio-item">
@@ -195,7 +195,7 @@
           
         </div>
       </section>
-      <section class="section__contact container">
+      <section id="contact" class="section__contact container">
         <h2 class="subtitle">contacto</h2>
         <div class="section__contact-items">
           <div class="section__contact-item">
@@ -217,7 +217,7 @@
       </section>
     </main>
     <footer class="footer container">
-      <p class="footer__text">Hecho con ❤ en Acdemlo</p>
+      <p class="footer__text">Hecho con ❤ en Academlo</p>
     </footer>
     <script>
       const btnMenu = document.querySelector(".btn-open");
@@ -229,6 +229,18 @@
       btnClose.onclick = () => {
         menu.classList.remove("show--menu");
       };
+
+      let cta=document.querySelectorAll(".nav__cta")
+
+      for (let i = 0; i < cta.length; i++) {
+        cta[i].onclick=(event)=>{
+          let current=document.querySelector(".active")
+          current.classList.remove("active")
+          cta[i].classList.add("active")
+          menu.classList.remove("show--menu");
+        }
+      }
+
     </script>
   </body>
 </html>
