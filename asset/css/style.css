@@ -314,6 +314,13 @@ img {
   top: 0;
   right: 0;
 }
+.section__about-figure{
+  display: flex;
+  align-items: center;
+  height: 208px;
+
+}
+
 .section__skill-figure {
   margin-bottom: 45px;
   background-color: #fff;
